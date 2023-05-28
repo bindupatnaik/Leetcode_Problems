@@ -1,8 +1,10 @@
 import java.util.ArrayList;
 import java.util.List;
 
+//dynamic array - where the size can increase on-demand.
 public class StackImplementationUsingArrayList {
     List<Integer> arr;
+    //here top represents length of number of elements in an arr.
     int top;
     int capacity; //you can use arr.size()
 
@@ -12,7 +14,7 @@ public class StackImplementationUsingArrayList {
         top = 0;
         capacity = 0;
     }
-
+    //Time - O(1)
     public void push(int data){
         if ( top == capacity){
             arr.add(data);
@@ -25,14 +27,18 @@ public class StackImplementationUsingArrayList {
 
     }
 
+    //Time - O(1)
     public int top(){
+        if (isEmpty()){
+            return -1;
+        }
         return arr.get(top-1);
     }
 
     public boolean isEmpty(){
         return (top==0);
     }
-
+    //Time - O(1)
     public int pop(){
         if (isEmpty())
             return -1;

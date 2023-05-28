@@ -1,3 +1,5 @@
+//here we use add at front technique for O(1) time complexity. otherwise if we add at end of list
+//then for pop it becomes O(n)
 public class StackImplementationUsingLinkedList {
     public class ListNode{
         int val;
@@ -10,13 +12,14 @@ public class StackImplementationUsingLinkedList {
     public StackImplementationUsingLinkedList(){
         this.top = null;
     }
-
+    //add at front
+    // Time - O(1)
     public void push(int data){
         ListNode newNode = new ListNode(data);
         newNode.next = top;
         top  = newNode;
     }
-
+    // Time - O(1)
     public int pop(){
         if (isEmpty())
             return -1;

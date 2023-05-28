@@ -2,8 +2,10 @@ import java.util.Arrays;
 
 //stacking of glass plates with other end closed
 //stack is linear data structure where insertions and deletions happen only at one end called top of stack.
+//stack with array is limited space where you cannot extend during runtime. if you know the space in advance u can use static array
 public class StackImplementationUsingArrays {
     int[] stack;
+    //here top represents length of number of elements in an arr.
     int top;
     int capacity;
     public StackImplementationUsingArrays(int capacity){
@@ -20,6 +22,7 @@ public class StackImplementationUsingArrays {
         return (top==0);
     }
     //push at one end
+    //Time - O(1)
     public void push(int data){
         if (isFull())
             return;
@@ -28,6 +31,7 @@ public class StackImplementationUsingArrays {
         System.out.println("item "+data+" pushed successfully");
     }
     //pop from same end
+    //Time - O(1)
     public int pop(){
         if (isEmpty())
             return -1;
@@ -35,7 +39,7 @@ public class StackImplementationUsingArrays {
         System.out.println("item " + data + " popped successfully");
         return data;
     }
-
+    //Time - O(1)
     public int top(){
         return stack[top - 1];
     }
