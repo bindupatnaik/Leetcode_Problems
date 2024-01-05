@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * Algorithm: BackTracking
- * Time: 
+ * Time:
  * Space: O(2*n) for recursion stack
  */
 public class LC_22_GenerateParenthesis {
